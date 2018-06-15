@@ -29,8 +29,8 @@ RET=$?
 
 if [[ "${RET}" == 0 ]]; then 
     echo "Merging index.yaml"
-    curl "$ARTIFACTORY_URL/index.yaml" -o index.yaml --fail -sSL -m 5
-    helm repo index packages --url=$ARTIFACTORY_URL --merge=index.yaml
+    curl "https://landoop.github.io/kafka-helm-charts/index.yaml" -o index.yaml --fail -sSL -m 5
+    helm repo index packages --url=$ARTIFACTORY_URL --merge=docs/index.yaml
 
     echo "Copying chart packages and index to docs"
     rm -f packages/*.compare
