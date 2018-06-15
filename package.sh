@@ -1,7 +1,7 @@
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 GREEN='\033[0;32m'
-ARTIFACTORY_URL=https://landoop.github.io/kafka-helm-charts/
+ARTIFACTORY_URL=https://github.com/SDLyu/kafka-helm-charts/
 CHARTS=$(find charts -maxdepth 1 -mindepth 1 -type d)
 HELM_VERSION='v2.5.1'
 
